@@ -1,0 +1,11 @@
+server:
+  port: 8025
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: "http://${eureka.instance.hostname}:${server.port}/eureka"
+    fetch-registry: true
+    register-with-eureka: true
